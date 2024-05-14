@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ text-decoration: none;
+ border: none;
+ outline: none;
+ scroll-behavior: smooth;
+ font-family: 'Poppins', Sans-Serif;
+ 
+}
+
+:root {
+ --bg-color: #1f242d;
+ --second-bg-color: #323946;
+ --text-color: #fff;
+ --main-color: orange;
+}
+html {
+ overflow-x: hidden;
+ font-size: 63.5%;
+}
+body {
+ background: var(--bg-color);
+ color: var(--text-color);
+}
+.header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 2rem 9%;
+ background: var(--bg-color);
+ align-items: center;
+ z-index: 100;
+}
+
+.logo {
+ font-size: 2.5rem;
+ color: var(--text-color);
+ font-weight: 600;
+ cursor: default;
+}
+.navbar a {
+ font-size: 1.7rem;
+ color: var(--text-color);
+ margin-left: 4rem;
+ transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active {
+ color: var(--main-color);
+}
+button {
+ padding: 9px 20px;
+ background-color: var(--main-color);
+ border: none;
+ cursor: pointer;
+ transition: all 0.3s ease 0s;
+ border-radius: 20px;
+ margin-left: 20px;
+}
+button:hover {
+ background-color: var(--main-color);
+ color: var(--text-color);
+}
+section {
+ min-height: 100vh;
+ padding: 6rem 5% 2rem;
+ background-image: url('/img/discount.avif');
+ background-position: center;
+ background-size: cover;
+}
+.home {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.home-content h1 {
+ font-size: 5.3rem;
+ font-weight: 700;
+ line-height: 1.3;
+}
+.home-content h3 {
+ font-size: 3.2rem;
+ font-weight: 700;
+}
+.home-content h3:nth-of-type(2) {
+ margin-bottom: 2rem;
+}
+span {
+ color: var(--bg-color);
+}
+.home-content p {
+ font-weight: 1.6rem;
+}
+.home-image img {
+ width: 35vw;
+ display: none;
+}
+.social-media a {
+ display: inline-flex;
+ justify-content: center;
+ align-items: center;
+ width: 4rem;
+ height: 4rem;
+ background: transparent;
+ border: .2rem solid var(--bg-color);
+ border-radius: 50%;
+ font-size: 2rem;
+ color: var(--bg-color);
+ margin: 3rem 1.5rem 3rem 0;
+ transition: 0.5s ease;
+}
+.social-media a:hover {
+ background: var(--bg-color);
+ color: var(--main-color);
+ box-shadow: 0 0 1rem var(--bg-color);
+}
+.btn {
+ display: inline-block;
+ padding: 1rem 2.8rem;
+ background: var(--main-color);
+ border-radius: 4rem;
+ box-shadow: 0 0 1rem var(--main-color);
+ font-size: 1.6rem;
+ color: var(--second-bg-color);
+ letter-spacing: .1rem;
+ font-weight: 600;
+ margin-top: 2rem;
+ transition: .5s ease;
+}
+.btn:hover {
+ box-shadow: none;
+}
+
+.home-2 {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 2rem;
+ background-image: url('/img/discount2.jpg');
+ 
+}
+.about-img img {
+ width: 35vw;
+ border-radius: 10rem;
+}
+.heading {
+ display: flex;
+ text-align: center;
+ font-size: 4.5rem;
+}
+.about-content h2 {
+ text-align: left;
+ line-height: 1.2;
+}
+.about-content h3 {
+ font-size: 2.6rem;
+}
+.about-content p {
+ font-size: 1.6rem;
+ margin: 2rem 0 3rem;
+}
+.products  {
+ background-image: url('/img/img-1.jpeg');
+ align-items: center;
+ justify-content: center;
+}
+.products h2{
+ margin-bottom: 5rem;
+}
+.products-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 2rem;
+ margin-top: 10rem;
+}
+.products-container .products-box1,
+.products-container .products-box2, 
+.products-container .products-box3 {
+ flex: 1 1 30rem;
+ padding: 3rem 2rem 4rem;
+ border-radius: 2rem;
+ text-align: center;
+ border: .2rem solid var(--bg-color);
+ transition: .5s ease;
+ background: rgba(255,255,255,0.5);
+-webkit-backdrop-filter: blur(10px);
+ backdrop-filter: blur(10px);
+ border: 1px solid rgba(255,255,255,0.25);
+ transform: scale(1.02);
+}
+.products-container .products-box1:hover {
+ background-image: url('/img/box1.jpg');
+ background-size: cover;
+ background-position: center;
+}
+.products-container .products-box2:hover {
+ background-image: url('/img/box2.jpg');
+ background-size: cover;
+ background-position: center;
+}
+.products-container .products-box3:hover {
+ background-image: url('/img/box3.jpg');
+ background-size: cover;
+ background-position: center;
+}
+.products-box1 i,
+.products-box2 i,
+.products-box3 i {
+ font-size: 7rem;
+ color: var(--main-color);
+}
+.products-box1 h3,
+.products-box2 h3, 
+.products-box3 h3 {
+ font-size: 2.6rem;
+ color: var(--main-color);
+}
+.products-box p {
+ font-size: 1.6rem;
+ margin: 1rem 0 3rem;
+}
+@media mobile and (min-width: 660px) {
+.products-container .products-box1,
+.products-container .products-box2, 
+.products-container .products-box3 {
+ width: 100%;
+}
+}
+.products {
+ background-image: url('/img/img-1.jpeg');
+ align-items: center;
+ justify-content: center;
+}
+.products h2{
+ margin-bottom: 10rem;
+ margin-top: 5rem;
+ align-items: center;
+ justify-content: center;
+}
+.dress-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 2rem;
+ margin-top: 10rem;
+ width: 100%;
+}
+.dress-container .pants-box {
+ flex: 1 1 30rem;
+ padding: 3rem 2rem 4rem;
+ border-radius: 2rem;
+ text-align: center;
+ border: .2rem solid var(--bg-color);
+ transition: .5s ease;
+ background-image: url('/img/pants/pantshover.jpg');
+ background-size: cover;
+ background-position: center;
+ width: fit-content;
+ 
+}
+.dress-container .jackets-box {
+    flex: 1 1 30rem;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+    background-image: url('/img/jackets/jacket.jpg');
+    background-size: cover;
+    background-position: center;
+    width: fit-content;
+    
+   }
+.dress-container .dress-box {
+    flex: 1 1 30rem;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+    background-image: url('/img/cartbg.jpg');
+    background-size: cover;
+    background-position: center;
+    width: fit-content;
+}
+.dress-box i,
+.pants-box i,
+.jackets-box i {
+ font-size: 7rem;
+ color: var(--main-color);
+}
+.dress-box h3,
+.pants-box h3, 
+.jackets-box h3 {
+ font-size: 2.6rem;
+ color: var(--main-color);
+}
+.products-box p {
+ font-size: 1.6rem;
+ margin: 1rem 0 3rem;
+}
+@media mobile and (min-width: 660px) {
+.dress-container .dress-box1,
+.dress-container .pants-box, 
+.dress-container .jackets-box {
+ width: 100%;
+}
+}
+.cart-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 10rem;
+   }
+.dress-cart img {
+ width: 100%;
+ height: auto;
+ border-radius: 5rem;
+ 
+}
+.cart-box {
+    flex: 1 1 30rem;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+    width: 200px;
+    background: rgba(31,36,45,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(31,36,45,0.25);
+
+}
+.pants-cart img {
+    width: 100%;
+    height: auto;
+    border-radius: 5rem;
+}
+.pants-cart {
+    background-image: url(/img/pants/pantsbg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.jackets-cart {
+    background-image: url(/img/jackets/jacketsbg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.jackets-cart img {
+    width: 100%;
+    height: auto;
+    border-radius: 5rem;
+}
+.dress-cart {
+    background-image: url('/img/dress/dressbg.jpg');
+    background-position: center;
+    background-size: cover;
+}
